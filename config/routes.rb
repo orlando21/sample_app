@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'foo/bar'
+
+  root 'static_pages#home'
 
   get 'foo/baz'
 
@@ -11,5 +12,4 @@ Rails.application.routes.draw do
 
   get  'static_pages/contact'
 
-  root 'application#hello'
 end
