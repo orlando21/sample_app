@@ -5,4 +5,7 @@ class ApplicationController < ActionController::Base
     render html: "hello, world!"
   end
 
+  def contact
+  end
+
 end
