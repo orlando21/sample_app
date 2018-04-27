@@ -12,11 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20180425140852) do
 
-  create_table "Test", id: false, force: :cascade do |t|
-    t.text "model"
-    t.integer "year"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
