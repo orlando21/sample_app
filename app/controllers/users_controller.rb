@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def create    # associated with 'post' verb
     @user = User.new(user_input)    # Not the final implementation!
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
