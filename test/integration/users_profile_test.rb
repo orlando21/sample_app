@@ -21,4 +21,11 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "stats display" do
+    get user_path(@user)
+    assert_template 'users/show'
+    assert_select 'section.stats', count: 1
+    assert_select 'strong.stat'
+  end
+
 end
